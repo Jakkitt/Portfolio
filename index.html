@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
   <body>
     <header class="navbar">
@@ -22,7 +23,7 @@
             <ul class="nav-links">
                 <li><a href="#" onclick="switchTab('education'); return false;" data-i18n="nav.education">Education</a></li>
                 <li><a href="#" onclick="switchTab('certificates'); return false;" data-i18n="nav.certificates">Certificates</a></li>
-                <li><a href="#" onclick="switchTab('skills'); return false;" data-i18n="nav.skills">My Skill</a></li>
+                <li><a href="#" onclick="switchTab('skills'); return false;" data-i18n="nav.skills">Skills</a></li>
                 <li><a href="#" onclick="switchTab('contact'); return false;" data-i18n="nav.contact">Contact</a></li>
             </ul>
 
@@ -115,6 +116,128 @@
             </div>
             <div class="cert-item">
                 <img src="Image/cert_5.avif" alt="Certificate 5" class="cert-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section tab-content" id="skills">
+        <h2 class="section-title" data-i18n="nav.skills">MY SKILLS</h2>
+        
+        <div class="skills-wrapper">
+            <!-- Skills Container -->
+            <div class="skills-container">
+                <!-- Hard Skills -->
+                <div class="skill-group hard-skills">
+                    <h3 class="skill-cat-title">Hard Skills</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-csharp-plain colored"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-nodejs-plain-wordmark colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-microsoftsqlserver-plain colored"></i>
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-github-original colored"></i>
+                            <span>GitHub Desktop</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-canva-original colored"></i>
+                            <span>Canva</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-figma-plain colored"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-card">
+                             <!-- Generic Video Icon for DaVinci -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-icon"><path d="M15 10l5 5-5 5"/><path d="M4 4v16"/><path d="M9 4v16"/><rect x="4" y="8" width="5" height="4" fill="currentColor" fill-opacity="0.2"/></svg>
+                            <span>DaVinci</span>
+                        </div>
+                        <div class="skill-card">
+                            <!-- Generic Cut/Film Icon for Capcut -->
+                           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-icon"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><path d="M8.12 8.12 12 12"/></svg>
+                            <span>CapCut</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-group soft-skills">
+                    <h3 class="skill-cat-title">Soft Skills</h3>
+                    <div class="soft-skill-list">
+                        <div class="soft-skill-item">Teamwork</div>
+                        <div class="soft-skill-item">Critical Thinking</div>
+                        <div class="soft-skill-item">Time Management</div>
+                        <div class="soft-skill-item">Emotional Intelligence</div>
+                        <div class="soft-skill-item">Adaptability</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Showcase -->
+            <div class="projects-container">
+                <h3 class="skill-cat-title">Work Showcase</h3>
+                <div class="projects-grid">
+                     <!-- Poster -->
+                     <div class="project-card">
+                        <img src="Image/Projects/swensens_poster.jpg" alt="Poster Ads" class="project-img">
+                        <div class="project-overlay">
+                            <span>Poster Ads</span>
+                            <small>(Canva)</small>
+                        </div>
+                     </div>
+
+                     <!-- Topup App -->
+                     <div class="project-card">
+                        <div class="project-preview app">
+                            <span>Topup App</span>
+                             <small>(Figma)</small>
+                        </div>
+                     </div>
+
+                     <!-- TikTok -->
+                     <div class="project-card">
+                        <div class="project-preview video">
+                             <span>TikTok Video</span>
+                              <small>(CapCut)</small>
+                        </div>
+                     </div>
+                </div>
             </div>
         </div>
     </section>
