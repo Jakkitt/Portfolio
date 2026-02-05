@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+        
+        <div class="logo" onclick="switchTab('home')" style="cursor: pointer;">
+            <span class="name" data-i18n="name">Jakkit Jantarak</span>
+            <span class="role" data-i18n="role">Portfolio</span>
+        </div>
+
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#" onclick="switchTab('education'); return false;" data-i18n="nav.education">Education</a></li>
+                <li><a href="#" onclick="switchTab('certificates'); return false;" data-i18n="nav.certificates">Certificates</a></li>
+                <li><a href="#" onclick="switchTab('skills'); return false;" data-i18n="nav.skills">My Skill</a></li>
+                <li><a href="#" onclick="switchTab('contact'); return false;" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="lang-switch" role="tablist" aria-label="Language switch">
+                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                <button class="lang-btn" data-lang="th" aria-pressed="false">TH</button>
+            </div>
+            
+
+        </div>
+
+    </header>
+
+    <section id="home" class="hero tab-content active">
+        <div class="profile-card">
+            <div class="profile-media">
+                <!-- ใส่รูปที่ไฟล์ "profile.jpg" ในโฟลเดอร์นี้ หรือแก้เป็น path ของรูปคุณ -->
+                <img src="Image/jakkit_photo.jpeg" alt="Jakkit Jantarak" class="profile-img">
+            </div>
+
+            <div class="profile-content">
+                <h1 class="profile-name" data-i18n="name">Jakkit Jantarak</h1>
+                <p class="profile-tag" data-i18n="tag">Student • Web Developer • Designer</p>
+
+                <ul class="profile-details">
+                    <li><strong data-i18n="birthdayLabel">Birthday:</strong> <span data-i18n="birthday">12 February 2003</span></li>
+                    <li><strong data-i18n="ageLabel">Age:</strong> <span id="age" aria-live="polite">กำลังคำนวณ...</span></li>
+                    <li><strong data-i18n="mailLabel">Mail:</strong> <a id="mail" href="mailto:Jakkit.jant@gmail.com">Jakkit.jant@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section tab-content" id="education">
+      <h2 class="section-title" data-i18n="edu.title">EDUCATION</h2>
+      <div class="education-container" id="edu-slider">
+        <!-- Bachelor Degree -->
+        <div class="edu-card active-slide" data-slide="0">
+            <h3 class="edu-level" data-i18n="edu.bachelor">Bachelor Degree</h3>
+            <img src="Image/bangkok_university.avif" alt="University Logo" class="edu-logo">
+            <h4 class="edu-school" data-i18n="edu.uni.name">Bangkok University</h4>
+            <p class="edu-program" data-i18n="edu.uni.program">Information Technology and Innovation Programs<br>Science - Data Science and Cybersecurity</p>
+        </div>
+
+        <!-- Senior High School -->
+        <div class="edu-card" data-slide="1">
+            <h3 class="edu-level" data-i18n="edu.highschool">Senior High School</h3>
+            <img src="Image/high_school.avif" alt="High School Logo" class="edu-logo">
+            <h4 class="edu-school" data-i18n="edu.high.name">Srinagarindra The Princess Mother School Roi-et</h4>
+            <p class="edu-program" data-i18n="edu.high.program">Sciences and Mathematics Program</p>
+        </div>
+
+        <!-- Elementary School -->
+        <div class="edu-card" data-slide="2">
+            <h3 class="edu-level" data-i18n="edu.elementary">Elementary School</h3>
+            <img src="Image/elementary_school.avif" alt="Elementary School Logo" class="edu-logo">
+            <h4 class="edu-school" data-i18n="edu.elem.name">Watsratong Municipal School, Roi-et</h4>
+            <p class="edu-program" data-i18n="edu.elem.program">Basic Education</p>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="edu-controls">
+          <button class="control-btn" onclick="prevSlide()" aria-label="Previous">❮</button>
+          <div class="slide-dots">
+              <div class="dot active" onclick="goToSlide(0)"></div>
+              <div class="dot" onclick="goToSlide(1)"></div>
+              <div class="dot" onclick="goToSlide(2)"></div>
+          </div>
+          <button class="control-btn" onclick="nextSlide()" aria-label="Next">❯</button>
+      </div>
+    </section>
+
+
+
+    <section class="cert-section tab-content" id="certificates">
+        <h2 class="section-title" data-i18n="cert.title">CERTIFICATES</h2>
+        <div class="cert-grid">
+            <div class="cert-item">
+                <img src="Image/cert_1.avif" alt="Certificate 1" class="cert-img" loading="lazy">
+            </div>
+            <div class="cert-item">
+                <img src="Image/cert_2.avif" alt="Certificate 2" class="cert-img" loading="lazy">
+            </div>
+            <div class="cert-item">
+                <img src="Image/cert_3.avif" alt="Certificate 3" class="cert-img" loading="lazy">
+            </div>
+            <div class="cert-item">
+                <img src="Image/cert_4.avif" alt="Certificate 4" class="cert-img" loading="lazy">
+            </div>
+            <div class="cert-item">
+                <img src="Image/cert_5.avif" alt="Certificate 5" class="cert-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section tab-content" id="contact">
+        <h2 class="section-title" data-i18n="contact.title">CONTACT</h2>
+        <div class="contact-container">
+            <div class="contact-card">
+                <a href="mailto:jakkit.jant@bumail.net" class="contact-item">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.email">Email</h3>
+                        <p>jakkit.jant@bumail.net</p>
+                    </div>
+                </a>
+
+                <a href="tel:0970872360" class="contact-item">
+                    <div class="icon-box">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 
+                    </div>
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.phone">Phone</h3>
+                        <p>097-087-2360</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/จักรกฤษณ์-จันทรักษ์-973038386/" target="_blank" class="contact-item">
+                     <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.facebook">LinkedIn</h3>
+                        <p>Jakkit Jantarak</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+      // i18n + age updater
+      let I18N = {};
+
+      async function loadLang(lang = "en") {
+        try {
+          const res = await fetch(`${lang}.json`);
+          const dict = await res.json();
+          I18N = dict;
+
+          // apply simple translations
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.dataset.i18n;
+            if (dict[key]) el.innerHTML = dict[key];
+          });
+
+          // set mail href/text - REMOVED (Hardcoded in HTML)
+          /* 
+          const mailEl = document.getElementById("mail");
+          if (mailEl && dict.mail) {
+            mailEl.href = `mailto:${dict.mail}`;
+            mailEl.textContent = dict.mail;
+          }
+          */
+
+
+
+          document.documentElement.lang = lang;
+          const sel = document.getElementById("lang-select");
+          if (sel) sel.value = lang;
+
+          // update language buttons' active state (if present)
+          const buttons = document.querySelectorAll(".lang-btn");
+          buttons.forEach((b) => {
+            const isActive = b.dataset.lang === lang;
+            b.classList.toggle("active", isActive);
+            b.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          localStorage.setItem("lang", lang);
+
+          // update dynamic strings (age formatted with locale)
+          updateAge();
+        } catch (e) {
+          console.error("loadLang error", e);
+        }
+      }
+
+      // วันเกิด (ปี, เดือน(0-11), วัน)
+      const birth = new Date(2003, 1, 12, 0, 0, 0);
+
+      function computeAge(birth, now) {
+        let years = now.getFullYear() - birth.getFullYear();
+        let months = now.getMonth() - birth.getMonth();
+        let days = now.getDate() - birth.getDate();
+        let hours = now.getHours() - birth.getHours();
+        let minutes = now.getMinutes() - birth.getMinutes();
+        let seconds = now.getSeconds() - birth.getSeconds();
+
+        if (seconds < 0) {
+          seconds += 60;
+          minutes -= 1;
+        }
+        if (minutes < 0) {
+          minutes += 60;
+          hours -= 1;
+        }
+        if (hours < 0) {
+          hours += 24;
+          days -= 1;
+        }
+        if (days < 0) {
+          const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+          days += prevMonth.getDate();
+          months -= 1;
+        }
+        if (months < 0) {
+          months += 12;
+          years -= 1;
+        }
+
+        return { years, months, days, hours, minutes, seconds };
+      }
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function formatAgeString(a) {
+        const time = `${pad(a.hours)}:${pad(a.minutes)}:${pad(a.seconds)}`;
+        const tpl =
+          I18N && I18N.ageTemplate
+            ? I18N.ageTemplate
+            : "{years} ปี {months} เดือน {days} วัน {time}";
+        return tpl
+          .replace("{years}", a.years)
+          .replace("{months}", a.months)
+          .replace("{days}", a.days)
+          .replace("{time}", time);
+      }
+
+      function updateAge() {
+        const now = new Date();
+        const a = computeAge(birth, now);
+        const str = formatAgeString(a);
+        const el = document.getElementById("age");
+        if (el) el.textContent = str;
+      }
+
+        // Slider Logic
+        let currentSlide = 0;
+        const totalSlides = 3; 
+
+        function showSlide(index){
+            if(index >= totalSlides) index = 0;
+            if(index < 0) index = totalSlides - 1;
+            
+            currentSlide = index;
+
+            // Update cards
+            document.querySelectorAll('.edu-card').forEach(el => {
+                el.classList.remove('active-slide');
+                if(parseInt(el.dataset.slide) === index) el.classList.add('active-slide');
+            });
+
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, idx) => {
+               dot.classList.toggle('active', idx === index);
+            });
+        }
+
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+        function goToSlide(n) { showSlide(n); }
+
+        // Tab Switcher with Smooth Fade
+        let isSwitching = false;
+
+        function switchTab(tabId){
+            if(isSwitching) return;
+            
+            const oldTab = document.querySelector('.tab-content.active');
+            const newTab = document.getElementById(tabId);
+            
+            // If clicking same tab or invalid tab
+            if(!newTab || oldTab === newTab) return;
+            
+            // Update Nav (Optional: Close mobile menu)
+            const navLinks = document.querySelector('.nav-links');
+            if(navLinks) navLinks.classList.remove('active');
+
+            // 1. Fade Out Old
+            if(oldTab){
+                isSwitching = true;
+                oldTab.classList.remove('visible'); // Start fade out
+                
+                setTimeout(() => {
+                    oldTab.classList.remove('active'); // Hide display
+                    
+                    // 2. Prepare New
+                    newTab.classList.add('active'); // Set display
+                    
+                    // Small delay to allow browser to register display:block before opacity transition
+                    setTimeout(() => {
+                        newTab.classList.add('visible'); // Start fade in
+                        isSwitching = false;
+                    }, 50);
+                    
+                }, 400); // Wait for CSS transition time (0.4s)
+            } else {
+                // First load / No active tab
+                newTab.classList.add('active');
+                setTimeout(() => newTab.classList.add('visible'), 50);
+            }
+        }
+
+        // language selector
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".lang-btn");
+            buttons.forEach(btn => btn.addEventListener("click", e => loadLang(btn.dataset.lang)));
+
+            const saved = localStorage.getItem("lang") || document.documentElement.lang || "en";
+            loadLang(saved);
+
+            updateAge();
+            setInterval(updateAge, 1000);
+            
+            // Initial Tab Load (Fade in Home)
+            const home = document.getElementById('home');
+            if(home) {
+                home.classList.add('active');
+                setTimeout(() => home.classList.add('visible'), 100);
+            }
+        });
+    </script>
+  </body>
+</html>
